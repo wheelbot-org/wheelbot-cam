@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheelb⚙t - Cam Setup</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Wheelb⚙t.org</h1>
+        <h2>Cam Configurator</h2>
+        <hr>
+        <form action="/save" method="POST">
+            <label for="ssid">Wi-Fi Network (SSID)</label>
+
+            <div class="select-wrapper">
+                <div class="select-spinner" id="ssid-spinner"></div>
+
+                <select id="ssid" name="ssid" disabled current-data="{ssid_val}">
+                    <option>Scanning Wi-Fi networks...</option>
+                </select>
+            </div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="{wifi-password}">
+
+            <hr>
+
+            <label for="server_ip">Server IP</label>
+            <input type="text" id="server_ip" name="server_ip" value="{server_ip_val}">
+
+            <label for="server_port">Server Port</label>
+            <input type="text" id="server_port" name="server_port" value="{server_port_val}">
+
+            <hr>
+
+            <label for="frame_size">Frame Size</label>
+            <select id="frame_size" name="frame_size">
+                {frame_size_options}
+            </select>
+
+            <label for="jpeg_quality">JPEG Quality</label>
+            <input type="text" id="jpeg_quality" name="jpeg_quality" value="{jpeg_quality_val}">
+            <p class="info">Value from 10 (high) to 63 (low).</p>
+
+            <button type="submit">Save & Connect</button>
+        </form>
+    </div>
+</body>
+</html>

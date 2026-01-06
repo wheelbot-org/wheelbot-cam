@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheelb⚙t - Error</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wheelb⚙t.org</h1>
+        <h2>Cam Configurator</h2>
+        <hr>
+        <div class="error-icon">✗</div>
+        <h1>Error</h1>
+        <h2>Invalid Configuration</h2>
+        
+        <div class="error-box">
+            <p id="error-message">{error_message}</p>
+        </div>
+        
+        <button onclick="goBack()">Back to Setup</button>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
